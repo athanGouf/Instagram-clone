@@ -9,7 +9,7 @@ class SearchController extends Controller
 {
 
 
-    public function index(){
+    public function __invoke(){
         $keyword = request()->validate([
             'keywords' => 'required'
         ]);
