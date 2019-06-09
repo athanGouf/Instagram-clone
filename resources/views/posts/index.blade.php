@@ -24,7 +24,7 @@
 
                         <div>
                             <span class="text-secondary">
-                                {{$post->user->created_at->format('d-m-Y')}}
+                                {{$post->created_at->format('d-m-Y')}}
                             </span>
                         </div>
                     </div>
