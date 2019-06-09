@@ -12,14 +12,20 @@
                              class="rounded-circle w-100"
                              style="max-width: 50px;">
                     </div>
-                    <div>
-                        <div >
+                    <div class="d-flex">
+                        <div class="pr-3">
                             <a href="/profile/{{$post->user->id}}">
                             <span class="text-dark font-weight-bold">
                                 {{$post->user->username}}
                             </span>
                             </a>
 
+                        </div>
+
+                        <div>
+                            <span class="text-secondary">
+                                {{$post->user->created_at->format('d-m-Y')}}
+                            </span>
                         </div>
                     </div>
                 </div>
