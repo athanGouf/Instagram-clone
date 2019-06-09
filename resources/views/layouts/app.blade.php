@@ -38,10 +38,10 @@
 
                     </ul>
                     @auth
-                    <form action="/search" method="POST" role="search">
+                    <form action="/search" method="GET" role="search">
                         @csrf
                         <div class="input-group">
-                            <input type="text" class="form-control" name="q"
+                            <input type="text" class="form-control" name="keywords"
                                    placeholder="Search users">
                             <span class="input-group-btn">
                                 <button type="submit" class="btn btn-secondary">

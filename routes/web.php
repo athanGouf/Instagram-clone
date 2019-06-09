@@ -14,6 +14,8 @@
 
 Auth::routes();
 
+Route::get('/search','SearchController@index');
+
 Route::post('follow/{user}', 'FollowsController@store');
 
 Route::get('/', 'PostsController@index');
