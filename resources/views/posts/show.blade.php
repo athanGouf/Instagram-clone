@@ -14,7 +14,7 @@
                          class="rounded-circle w-100"
                         style="max-width: 50px;">
                 </div>
-                <div>
+                <div class="d-flex align-items-center">
                     <div >
                         <a href="/profile/{{$post->user->id}}">
                             <span class="text-dark font-weight-bold">
@@ -23,6 +23,16 @@
                         </a>
 
                     </div>
+                    @can('update', $post->user->profile)
+                        <div class="ml-3">
+                            <form action="/delete/{{$post->id}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button  class="btn btn-danger">Delete Post</button>
+                            </form>
+
+                        </div>
+                    @endcan
                 </div>
             </div>
             <hr>

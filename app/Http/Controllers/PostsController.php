@@ -56,5 +56,11 @@ class PostsController extends Controller
             'post' => $post
         ]);
     }
+    public function destroy(Post $post){
+        $this->authorize('update', $post->user->profile);
+
+        $post->delete();
+        return redirect('/profile/'. auth()->user()->id);
+    }
 
 }
